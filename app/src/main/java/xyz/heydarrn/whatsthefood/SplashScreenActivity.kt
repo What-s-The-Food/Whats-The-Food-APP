@@ -5,16 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.view.View
+import android.widget.ImageView
 
-class SplasScreenActivity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splas_screen)
+        setContentView(R.layout.activity_splash_screen)
 
-        val TIMES_MILES = 1000L
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
-        }, TIMES_MILES)
+        }, TIMES_MILLISECONDS)
+        supportActionBar?.hide()
+        findViewById<ImageView>(R.id.imageView_app_logo).setImageResource(R.drawable.logo_transparent)
+    }
+
+    companion object{
+        private const val TIMES_MILLISECONDS=2000L
     }
 }
