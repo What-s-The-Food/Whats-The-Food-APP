@@ -10,7 +10,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import xyz.heydarrn.whatsthefood.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-        private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_about
+                R.id.navigation_home, R.id.navigation_scan, R.id.navigation_about
             )
         )
 
