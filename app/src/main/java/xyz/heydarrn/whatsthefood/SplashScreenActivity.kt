@@ -27,10 +27,6 @@ class SplashScreenActivity : AppCompatActivity() {
 
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-    }
-
     private fun setAppLogo(){
         bindingSplash.imageView.setImageResource(R.drawable.logo_transparent)
     }
