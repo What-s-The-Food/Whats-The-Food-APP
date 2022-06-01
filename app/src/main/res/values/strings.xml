@@ -4,4 +4,6 @@
     <string name="title_home">Home</string>
     <string name="title_about">About</string>
     <string name="title_scan">Scan</string>
+    <string name="camerax">Camera</string>
+    <string name="search">Cari</string>
 </resources>
