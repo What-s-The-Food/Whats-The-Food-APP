@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/splash_screen_background.xml" value="0.184" />
+        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_main.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_splas_screen.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
       </map>
@@ -14,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
