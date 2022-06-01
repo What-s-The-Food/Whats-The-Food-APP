@@ -1,10 +1,11 @@
 package xyz.heydarrn.whatsthefood.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import com.google.android.material.snackbar.Snackbar
 import xyz.heydarrn.whatsthefood.R
 import xyz.heydarrn.whatsthefood.databinding.FragmentHomeBinding
 
@@ -30,8 +31,10 @@ class HomeFragment : Fragment() {
             imgSnapSnack.setImageResource(R.drawable.snap_your_snack)
             imgTextFill.setImageResource(R.drawable.text_home_scren)
 
+            imageButtonCamera.setOnClickListener {
+                Snackbar.make(requireContext(), it,"Kamera telah diklik!",Snackbar.LENGTH_SHORT).show()
+            }
+
         }
     }
-
-    companion object
 }
