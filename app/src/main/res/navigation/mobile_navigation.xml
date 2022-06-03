@@ -12,15 +12,13 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_scan"
-        android:name="xyz.heydarrn.whatsthefood.fragment.DashboardFragment"
-        android:label="@string/title_scan"
-        tools:layout="@layout/fragment_scan" />
-
-    <fragment
         android:id="@+id/navigation_about"
         android:name="xyz.heydarrn.whatsthefood.fragment.AboutFragment"
         android:label="@string/title_about"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/navigation_foods"
+        android:name="xyz.heydarrn.whatsthefood.fragment.FoodsListFragment"
+        android:label="@string/title_foods" />
 
 </navigation>

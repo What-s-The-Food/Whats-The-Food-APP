@@ -26,14 +26,11 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         bindHome.apply {
-            imageButtonCamera.setImageResource(R.drawable.camera_icon)
-            imgIllustration.setImageResource(R.drawable.undraw_cookie_love_re_lsjh_1)
-            imgSnapSnack.setImageResource(R.drawable.snap_your_snack)
-            imgTextFill.setImageResource(R.drawable.text_home_scren)
-
+            imageButtonCamera.setImageResource(R.drawable.ic_camera_button_inkscape)
             imageButtonCamera.setOnClickListener {
                 Snackbar.make(requireContext(), it,"Kamera telah diklik!",Snackbar.LENGTH_SHORT).show()
             }
+            imageView3.setImageResource(R.drawable.undraw_cookie_love_re_lsjh)
 
         }
     }
