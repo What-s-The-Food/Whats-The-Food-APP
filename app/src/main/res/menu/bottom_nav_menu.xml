@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_baseline_home_24"
         android:title="@string/title_home" />
     <item
-        android:id="@+id/navigation_scan"
-        android:icon="@drawable/ic_baseline_document_scanner_24"
-        android:title="@string/title_scan" />
+        android:id="@+id/navigation_foods"
+        android:icon="@drawable/ic_baseline_view_list_24"
+        android:title="@string/title_foods" />
     <item
         android:id="@+id/navigation_about"
         android:icon="@drawable/ic_baseline_account_circle_24"
