@@ -3,51 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/green_dimmed">
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/food_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="16dp"
             android:fontFamily="@font/amiko_bold"
-            android:text="Hamburger"
+            android:text="@string/hamburger"
+            android:textColor="@color/cream"
             android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintTop_toBottomOf="@+id/food_picture" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/food_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:fontFamily="@font/amiko_semibold"
-            android:text="Burger dengan daging sapi"
+            android:text="@string/burger_dengan_daging_sapi"
+            android:textColor="@color/cream"
             android:textSize="20sp"
             android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/food_title" />
 
         <ImageView
-            android:id="@+id/imageView12"
+            android:id="@+id/food_picture"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/picture_of_the_food"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/pexels_valeria_boltneva_1639562_xml_design" />
+
+        <ImageButton
+            android:id="@+id/food_facts"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/tampilkan_info_lengkap"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/food_picture"
+            app:layout_constraintVertical_bias="0.6"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+            app:tint="@color/cream" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

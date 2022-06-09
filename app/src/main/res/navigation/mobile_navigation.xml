@@ -20,5 +20,10 @@
         android:id="@+id/navigation_foods"
         android:name="xyz.heydarrn.whatsthefood.fragment.FoodsListFragment"
         android:label="@string/title_foods" />
+    <fragment
+        android:id="@+id/foodFactsFragment"
+        android:name="xyz.heydarrn.whatsthefood.fragment.FoodFactsFragment"
+        android:label="fragment_food_facts"
+        tools:layout="@layout/fragment_food_facts" />
 
 </navigation>

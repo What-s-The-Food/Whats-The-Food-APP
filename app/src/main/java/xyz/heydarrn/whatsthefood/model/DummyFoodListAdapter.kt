@@ -1,22 +1,52 @@
 package xyz.heydarrn.whatsthefood.model
 
+import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import xyz.heydarrn.whatsthefood.databinding.FoodCardBinding
 
 class DummyFoodListAdapter : ListAdapter<DummyFoods,DummyFoodListAdapter.DummyFoodsViewHolder>(DummyFoodsDiffUtil()) {
-    class DummyFoodsViewHolder(private val bindingFoods:FoodCardBinding):RecyclerView.ViewHolder(bindingFoods.root) {
-        fun setFoodToBinds(foodsToBind:DummyFoods){
+    var whenFoodSelected:ChooseThisFood?=null
 
+    fun setThisFoodToDetail(thisSelectedFood:ChooseThisFood){
+        this.whenFoodSelected=thisSelectedFood
+    }
+    inner class DummyFoodsViewHolder(private val bindingFoods:FoodCardBinding):RecyclerView.ViewHolder(bindingFoods.root) {
+        fun setFoodToBinds(foodsToBind:DummyFoods){
+            bindingFoods.apply {
+                Glide.with(itemView)
+                    .load(foodsToBind.foodPictures)
+                    .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
+                    .into(foodPicture)
+
+                foodTitle.text=foodsToBind.foodName
+                foodSubtitle.text=foodsToBind.shortDescription
+                foodFacts.setOnClickListener {
+
+                }
+            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DummyFoodsViewHolder {
-        TODO("Not yet implemented")
+        val view=FoodCardBinding.inflate(LayoutInflater.from(parent.context),parent,false)
+        return DummyFoodsViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: DummyFoodsViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.setFoodToBinds(getItem(position))
+    }
+
+    interface ChooseThisFood{
+        fun showThisFood(
+            selectedFood:String,
+            selectedFoodPicture:Int,
+            selectedFoodCalories:Double,
+            selectedFoodProtein:Double,
+            selectedFoodFattyAcid:Double,
+            selectedFoodCarbohydrate:Double,)
     }
 }

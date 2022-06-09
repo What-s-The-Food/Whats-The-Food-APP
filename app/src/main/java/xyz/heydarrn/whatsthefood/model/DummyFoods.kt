@@ -2,9 +2,10 @@ package xyz.heydarrn.whatsthefood.model
 
 data class DummyFoods(
     val foodName:String,
+    val foodPictures:Int,
     val shortDescription:String,
-    val protein:Int,
-    val carbohydrate:Int,
-    val calories:Int,
-    val fattyAcid:Int
+    val protein:Double,
+    val carbohydrate:Double,
+    val calories:Double,
+    val fattyAcid:Double
 )

@@ -7,4 +7,13 @@
     <string name="icon_of_camera_description">Icon of camera to start taking picture of snack</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hamburger">Hamburger</string>
+    <string name="burger_dengan_daging_sapi">Burger dengan daging sapi</string>
+    <string name="tampilkan_info_lengkap">Tampilkan info lengkap</string>
+    <string name="picture_of_the_food">Picture of the food</string>
+    <string name="calories_template">Kalori : %1$s</string>
+    <string name="carbohydrate_template">Karbohidrat : %1$s</string>
+    <string name="protein_template">Protein : %1$s</string>
+    <string name="fatty_acid_template">Lemak : %1$s</string>
+
 </resources>
