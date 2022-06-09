@@ -5,7 +5,8 @@
     android:id="@+id/foodFactsLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FoodFactsFragment" >
+    android:background="@color/green_dimmed"
+    tools:context=".fragment.FoodFactsFragment">
 
     <ImageView
         android:id="@+id/detail_food_image"
@@ -23,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/hamburger"
+        android:textColor="@color/cream"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
@@ -36,13 +38,15 @@
         android:layout_marginTop="16dp"
         android:drawablePadding="2dp"
         android:gravity="center"
-        android:text="Kalori "
+        android:text="@string/kalori"
+        android:textColor="@color/cream"
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_fire"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_food_title" />
+        app:layout_constraintTop_toBottomOf="@+id/detail_food_title"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/detail_carbohydrate"
@@ -51,7 +55,8 @@
         android:layout_marginTop="8dp"
         android:drawablePadding="2dp"
         android:gravity="center"
-        android:text="Karbohidrat"
+        android:text="@string/karbohidrat"
+        android:textColor="@color/cream"
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_flash"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +72,8 @@
         android:layout_marginEnd="304dp"
         android:drawablePadding="2dp"
         android:gravity="center"
-        android:text="Protein"
+        android:text="@string/protein"
+        android:textColor="@color/cream"
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_muscle2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +87,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:drawablePadding="2dp"
-        android:text="Lemak"
+        android:text="@string/lemak"
+        android:textColor="@color/cream"
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_trans_fats_free"
         app:layout_constraintEnd_toEndOf="parent"
