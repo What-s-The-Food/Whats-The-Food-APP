@@ -29,17 +29,17 @@ class FoodFactsFragment : Fragment() {
         setCompleteInfoFromSelectedFood(argumentsFood)
     }
 
-    fun setCompleteInfoFromSelectedFood(arguments:FoodFactsFragmentArgs) {
+    private fun setCompleteInfoFromSelectedFood(arguments:FoodFactsFragmentArgs) {
         bindingFacts.apply {
             Glide.with(this@FoodFactsFragment)
                 .load(arguments.dummyFoodsForFacts.foodPictures)
                 .into(detailFoodImage)
 
             detailFoodTitle.text=arguments.dummyFoodsForFacts.foodName
-            detailCalories.text=arguments.dummyFoodsForFacts.calories
-            detailCarbohydrate.text=arguments.dummyFoodsForFacts.carbohydrate
-            detailProtein.text=arguments.dummyFoodsForFacts.protein
-            detailFatAcid.text=arguments.dummyFoodsForFacts.fattyAcid
+            detailCalories.text=resources.getString(R.string.calories_template,arguments.dummyFoodsForFacts.calories)
+            detailCarbohydrate.text=resources.getString(R.string.carbohydrate_template,arguments.dummyFoodsForFacts.carbohydrate)
+            detailProtein.text=resources.getString(R.string.protein_template,arguments.dummyFoodsForFacts.protein)
+            detailFatAcid.text=resources.getString(R.string.fatty_acid_template,arguments.dummyFoodsForFacts.fattyAcid)
         }
     }
 }

@@ -36,6 +36,7 @@
         android:id="@+id/detail_calories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:drawablePadding="2dp"
         android:gravity="center"
@@ -44,7 +45,7 @@
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_fire"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_food_title"
         tools:ignore="TextContrastCheck" />
@@ -53,6 +54,7 @@
         android:id="@+id/detail_carbohydrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:drawablePadding="2dp"
         android:gravity="center"
@@ -61,7 +63,7 @@
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_flash"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.027"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_calories" />
 
@@ -69,8 +71,8 @@
         android:id="@+id/detail_protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="304dp"
         android:drawablePadding="2dp"
         android:gravity="center"
         android:text="@string/protein"
@@ -78,7 +80,7 @@
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_muscle2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_carbohydrate" />
 
@@ -86,6 +88,7 @@
         android:id="@+id/detail_fat_acid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:drawablePadding="2dp"
         android:text="@string/lemak"
@@ -93,7 +96,7 @@
         android:textSize="16sp"
         app:drawableStartCompat="@drawable/ic_trans_fats_free"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/detail_protein" />
 
