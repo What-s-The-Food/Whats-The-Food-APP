@@ -27,7 +27,11 @@
     <fragment
         android:id="@+id/foodFactsFragment"
         android:name="xyz.heydarrn.whatsthefood.fragment.FoodFactsFragment"
-        android:label="fragment_food_facts"
-        tools:layout="@layout/fragment_food_facts" />
+        android:label="Food Facts"
+        tools:layout="@layout/fragment_food_facts">
+        <argument
+            android:name="dummyFoodsForFacts"
+            app:argType="xyz.heydarrn.whatsthefood.model.DummyFoods" />
+    </fragment>
 
 </navigation>

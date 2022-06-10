@@ -25,7 +25,7 @@ class DummyFoodListAdapter : ListAdapter<DummyFoods,DummyFoodListAdapter.DummyFo
                 foodTitle.text=foodsToBind.foodName
                 foodSubtitle.text=foodsToBind.shortDescription
                 foodFacts.setOnClickListener {
-
+                    whenFoodSelected?.showThisFood(foodsToBind)
                 }
             }
         }
@@ -41,12 +41,6 @@ class DummyFoodListAdapter : ListAdapter<DummyFoods,DummyFoodListAdapter.DummyFo
     }
 
     interface ChooseThisFood{
-        fun showThisFood(
-            selectedFood:String,
-            selectedFoodPicture:Int,
-            selectedFoodCalories:Double,
-            selectedFoodProtein:Double,
-            selectedFoodFattyAcid:Double,
-            selectedFoodCarbohydrate:Double,)
+        fun showThisFood(showSelectedFood:DummyFoods)
     }
 }
