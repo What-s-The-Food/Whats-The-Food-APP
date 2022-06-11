@@ -5,56 +5,97 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import xyz.heydarrn.whatsthefood.R
+import xyz.heydarrn.whatsthefood.databinding.FragmentFoodsListBinding
+import xyz.heydarrn.whatsthefood.model.DummyFoodListAdapter
+import xyz.heydarrn.whatsthefood.model.DummyFoods
+import xyz.heydarrn.whatsthefood.viewmodel.DummyFoodsViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FoodsListFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class FoodsListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _bindingFood:FragmentFoodsListBinding?=null
+    private val bindingFood get() = _bindingFood!!
+    private val list=ArrayList<DummyFoods>()
+    private val adapterDummy by lazy { DummyFoodListAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_foods_list, container, false)
+        _bindingFood=FragmentFoodsListBinding.inflate(inflater,container,false)
+        return bindingFood.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment FoodsListFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            FoodsListFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        true.loadingProgress()
+        list.addAll(listFood)
+        setRecyclerView()
+
+    }
+
+    private val listFood:ArrayList<DummyFoods> get() {
+        this.resources.apply {
+            val foodName=getStringArray(R.array.food_list)
+            val foodPics=obtainTypedArray(R.array.foods_pictures)
+            val foodDesc=getStringArray(R.array.food_desc)
+            val foodCalories=getStringArray(R.array.food_calories)
+            val foodProtein=getStringArray(R.array.food_proteins)
+            val foodCarbs=getStringArray(R.array.food_carbohydrate)
+            val foodFats=getStringArray(R.array.food_fatsacid)
+
+            val listPerFood=ArrayList<DummyFoods>()
+            for (foodie in foodName.indices){
+                val food=DummyFoods(
+                    foodName = foodName[foodie],
+                    foodPictures = foodPics.getResourceId(foodie,-1),
+                    shortDescription = foodDesc[foodie],
+                    calories = foodCalories[foodie],
+                    protein = foodProtein[foodie],
+                    carbohydrate = foodCarbs[foodie],
+                    fattyAcid = foodFats[foodie]
+                )
+                listPerFood.add(food)
             }
+            foodPics.recycle()
+            return listPerFood
+        }
+
+    }
+
+    private fun setRecyclerView (){
+        bindingFood.recyclerViewFoodList.layoutManager=LinearLayoutManager(context)
+        adapterDummy.submitList(list)
+        bindingFood.recyclerViewFoodList.adapter=adapterDummy
+        adapterDummy.setThisFoodToDetail(object : DummyFoodListAdapter.ChooseThisFood {
+            override fun showThisFood(showSelectedFood: DummyFoods) {
+                val sendCompleteFood=DummyFoods(
+                    foodName = showSelectedFood.foodName,
+                    foodPictures = showSelectedFood.foodPictures,
+                    shortDescription = showSelectedFood.shortDescription,
+                    protein = showSelectedFood.protein,
+                    calories = showSelectedFood.calories,
+                    carbohydrate = showSelectedFood.carbohydrate,
+                    fattyAcid = showSelectedFood.fattyAcid
+                )
+
+                findNavController().navigate(FoodsListFragmentDirections.actionNavigationFoodsToFoodFactsFragment(sendCompleteFood))
+            }
+
+        })
+        false.loadingProgress()
+    }
+
+    private fun Boolean.loadingProgress(){
+        when(this){
+            true -> bindingFood.progressBarFoodList.visibility=View.VISIBLE
+            false -> bindingFood.progressBarFoodList.visibility=View.GONE
+        }
     }
 }

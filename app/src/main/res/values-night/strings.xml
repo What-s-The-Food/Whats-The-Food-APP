@@ -1,4 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="icon_of_camera_description">Icon of camera to start taking picture of snack</string>
+    <string name="hamburger">Hamburger</string>
+    <string name="burger_dengan_daging_sapi">Burger dengan daging sapi</string>
+    <string name="tampilkan_info_lengkap">Tampilkan info lengkap</string>
+    <string name="picture_of_the_food">Picture of the food</string>
+    <string name="calories_template">Kalori : %1$s</string>
+    <string name="carbohydrate_template">Karbohidrat : %1$s</string>
+    <string name="protein_template">Protein : %1$s</string>
+    <string name="fatty_acid_template">Lemak : %1$s</string>
+    <string name="kalori">Kalori</string>
+    <string name="karbohidrat">Karbohidrat</string>
+    <string name="protein">Protein</string>
+    <string name="lemak">Lemak</string>
+    <string name="search_food">Search food</string>
+
+    <!-- array of food name   -->
+    <string-array name="food_list">
+        <item>Hamburger</item>
+        <item>Crepes</item>
+        <item>Bakso</item>
+        <item>Kebab</item>
+    </string-array>
+
+    <!-- array of food short description   -->
+    <string-array name="food_desc">
+        <item>Burger dengan satu patty</item>
+        <item>Crepes dengan selai coklat dan stroberi</item>
+        <item>Bakso daging sapi</item>
+        <item>Makanan asal Timur Tengah dengan daging sapi/kambing</item>
+    </string-array>
+
+    <!-- array of calories for foods   -->
+    <string-array name="food_calories">
+        <item>295</item>
+        <item>224</item>
+        <item>57</item>
+        <item>185.4</item>
+    </string-array>
+
+    <!-- array of carbs for foods   -->
+    <string-array name="food_carbohydrate">
+        <item>24 gr</item>
+        <item>21.66 gr</item>
+        <item>2.12 gr</item>
+        <item>11 gr</item>
+    </string-array>
+
+    <!-- array of proteins for foods  -->
+    <string-array name="food_proteins">
+        <item>17 gr</item>
+        <item>8.76 gr</item>
+        <item>3.47 gr</item>
+        <item>12.1 gr</item>
+    </string-array>
+
+    <!-- array of fatty acid/lemak for foods   -->
+    <string-array name="food_fatsacid">
+        <item>144 gr</item>
+        <item>11.08 gr</item>
+        <item>3.69 gr</item>
+        <item>10 gr</item>
+    </string-array>
+
+    <!--  array of food pictures  -->
+    <integer-array name="foods_pictures">
+        <item>@drawable/pexels_valeria_boltneva_1639562</item>
+        <item>@drawable/pexels_eileen_lamb_3225499_crepes</item>
+        <item>@drawable/thai_food_noodles_with_pork_meatball_vegetable</item>
+        <item>@drawable/pexels_nishant_aneja_2955819_kebab</item>
+    </integer-array>
 </resources>
