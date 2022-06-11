@@ -4,32 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.184" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/custom_protein_icon.xml" value="0.184" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.184" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.184" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_fire.xml" value="0.158" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_flash.xml" value="0.158" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_launcher_background.xml" value="0.184" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_muscle.xml" value="0.158" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_muscle2.xml" value="0.158" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/ic_trans_fats_free.xml" value="0.158" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/drawable/splash_screen_background.xml" value="0.184" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_preview.xml" value="0.25" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_splas_screen.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/food_card.xml" value="0.5" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_about.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_dashboard.xml" value="0.22010869565217392" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_food_facts.xml" value="0.33" />
-        <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_foods_list.xml" value="0.34791666666666665" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_home.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/layout/fragment_scan.xml" value="0.22010869565217392" />
         <entry key="..\:/Android Development Dicoding x Bangkit/WhatsTheFood/app/src/main/res/menu/bottom_nav_menu.xml" value="0.34791666666666665" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/drawable/ic_baseline_photo_camera_24.xml" value="0.1" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/drawable/ic_baseline_view_list_24.xml" value="0.1" />
         <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/activity_camera.xml" value="0.184375" />
         <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/activity_main.xml" value="0.184375" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/activity_preview.xml" value="0.184375" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/activity_result.xml" value="0.184375" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/food_card.xml" value="0.184375" />
         <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/fragment_foods_list.xml" value="0.184375" />
         <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/fragment_home.xml" value="0.184375" />
+        <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/fragment_preview.xml" value="0.184375" />
         <entry key="..\:/Kampus/Men/Tugas/bangkit/capstone/app/src/main/res/layout/fragment_scan.xml" value="0.184375" />
       </map>
     </option>
@@ -43,7 +40,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.22" />
       </ProjectState>
     </option>
   </component>
