@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface ApiService {
     @Multipart
-    @POST("/predict")
+    @POST("predict")
     fun getFoods(
         @Part file:MultipartBody.Part
     ):Call<FoodsResponse>
