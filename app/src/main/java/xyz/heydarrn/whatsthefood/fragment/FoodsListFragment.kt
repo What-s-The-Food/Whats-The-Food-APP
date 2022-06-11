@@ -34,8 +34,10 @@ class FoodsListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        true.loadingProgress()
         list.addAll(listFood)
         setRecyclerView()
+
     }
 
     private val listFood:ArrayList<DummyFoods> get() {
@@ -87,5 +89,13 @@ class FoodsListFragment : Fragment() {
             }
 
         })
+        false.loadingProgress()
+    }
+
+    private fun Boolean.loadingProgress(){
+        when(this){
+            true -> bindingFood.progressBarFoodList.visibility=View.VISIBLE
+            false -> bindingFood.progressBarFoodList.visibility=View.GONE
+        }
     }
 }
