@@ -1,9 +1,13 @@
 package xyz.heydarrn.whatsthefood.api
 
+import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
 
 interface ApiService {
-    @GET("predict")
-    fun getFoods():Call<FoodsResponse>
+    @Multipart
+    @POST("predict")
+    fun getFoods(
+        @Part file:MultipartBody.Part
+    ):Call<FoodsResponse>
 }
