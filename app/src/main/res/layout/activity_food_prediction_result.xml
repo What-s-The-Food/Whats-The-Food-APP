@@ -8,7 +8,7 @@
     tools:context=".FoodPredictionResultActivity">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/photo_taken"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:contentDescription="@string/picture_of_the_food"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/pexels_valeria_boltneva_1639562_xml_design" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/food_name_prediction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,10 +29,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/photo_taken" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/calories_prediction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -44,10 +44,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/food_name_prediction" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/carb_prediction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -59,10 +59,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/calories_prediction" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/protein_prediction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -74,10 +74,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/carb_prediction" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/fats_prediction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -90,6 +90,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/protein_prediction"
         app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,19 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:layout_margin="4dp"
+        android:contentDescription="@string/picture_of_the_food"
         android:src="@drawable/ic_baseline_image_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="TODO" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_search"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
         android:text="@string/search_food"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconPadding="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

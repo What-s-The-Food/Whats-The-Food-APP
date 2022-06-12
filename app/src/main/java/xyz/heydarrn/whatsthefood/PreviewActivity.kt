@@ -18,7 +18,7 @@ class PreviewActivity : AppCompatActivity() {
 
         //pemanggilan hasil foto
         val myFile = intent.getSerializableExtra("picture") as File
-        val isBackCamera = intent.getBooleanExtra("isBackCamera", true) as Boolean
+        val isBackCamera = intent.getBooleanExtra("isBackCamera", true)
 
         val result = rotateBitmap(
             BitmapFactory.decodeFile(myFile.path),
@@ -27,38 +27,13 @@ class PreviewActivity : AppCompatActivity() {
         binding.imgPreview.setImageBitmap(result)
 
         binding.btnSearch.setOnClickListener {
-            Intent(this,FoodPredictionResultActivity::class.java)
-                .putExtra("photo", myFile)
+            startActivity(
+                Intent(this,FoodPredictionResultActivity::class.java)
+                    .putExtra("photo", myFile)
+            )
         }
     }
 
-//    private fun uploadCapturedImageForPredicition(pictureToPredict:File){
-//        if (pictureToPredict!=null){
-//            val reducedFile= reduceFileImage(pictureToPredict as File)
-//
-//            val requestImage=pictureToPredict.asRequestBody("image/jpeg".toMediaTypeOrNull())
-//            val imageMultipart= MultipartBody.Part.createFormData(
-//                "image",
-//                reducedFile.name,
-//                requestImage
-//            )
-//
-//            val service=ApiConfig.getApiService().getFoods(imageMultipart)
-//            service.enqueue(object : Callback<FoodsResponse> {
-//                override fun onResponse(
-//                    call: Call<FoodsResponse>,
-//                    response: Response<FoodsResponse>
-//                ) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//                override fun onFailure(call: Call<FoodsResponse>, t: Throwable) {
-//                    TODO("Not yet implemented")
-//                }
-//
-//            })
-//        }
-//    }
     companion object {
         const val CAMERA_X_RESULT = 200
     }

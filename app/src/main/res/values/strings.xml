@@ -20,6 +20,7 @@
     <string name="protein">Protein</string>
     <string name="lemak">Lemak</string>
     <string name="search_food">Search food</string>
+    <string name="food_name_template">Prediksi : %1$s</string>
 
 
     <!-- array of food name   -->
