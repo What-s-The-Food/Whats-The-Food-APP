@@ -21,6 +21,7 @@
     <string name="lemak">Lemak</string>
     <string name="search_food">Search food</string>
     <string name="food_name_template">Prediksi : %1$s</string>
+    <string name="meet_the_dev">Meet The Dev</string>
 
 
     <!-- array of food name   -->
@@ -77,5 +78,41 @@
         <item>@drawable/pexels_eileen_lamb_3225499_crepes</item>
         <item>@drawable/thai_food_noodles_with_pork_meatball_vegetable</item>
         <item>@drawable/pexels_nishant_aneja_2955819_kebab</item>
+    </integer-array>
+
+    <string-array name="developer_name">
+        <item>Bill Harit Yafi</item>
+        <item>Gede Yoga Arisudana</item>
+        <item>Odi Elsamas</item>
+        <item>Falah Yudhistira Hanan</item>
+        <item>Naufal Haidar Rauf</item>
+        <item>Noorman Putra Ksatria</item>
+    </string-array>
+
+    <string-array name="developer_learning_path">
+        <item>Machine Learning</item>
+        <item>Machine Learning</item>
+        <item>Cloud Computing</item>
+        <item>Cloud Computing</item>
+        <item>Mobile Development</item>
+        <item>Mobile Development</item>
+    </string-array>
+
+    <integer-array name="developer_photo">
+        <item>@drawable/billharit</item>
+        <item>@drawable/gede_yoga</item>
+        <item>@drawable/odi_elsamas</item>
+        <item>@drawable/falah_yudhistira</item>
+        <item>@drawable/haidar</item>
+        <item>@drawable/noorman</item>
+    </integer-array>
+
+    <integer-array name="learning_path_icon">
+        <item>@drawable/ic_google_colaboratory_svg_logo</item>
+        <item>@drawable/ic_google_colaboratory_svg_logo</item>
+        <item>@drawable/ic_api</item>
+        <item>@drawable/ic_api</item>
+        <item>@drawable/ic_android_robot</item>
+        <item>@drawable/ic_android_robot</item>
     </integer-array>
 </resources>

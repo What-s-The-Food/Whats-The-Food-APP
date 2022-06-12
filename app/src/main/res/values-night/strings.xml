@@ -14,6 +14,7 @@
     <string name="protein">Protein</string>
     <string name="lemak">Lemak</string>
     <string name="search_food">Search food</string>
+    <string name="meet_the_dev">Meet The Dev</string>
 
     <!-- array of food name   -->
     <string-array name="food_list">
