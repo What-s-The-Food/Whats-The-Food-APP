@@ -1,6 +1,7 @@
 package xyz.heydarrn.whatsthefood.viewmodel
 
 import android.util.Log
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -18,7 +19,7 @@ class UploadImageViewModel:ViewModel() {
     private var _predictionResult=MutableLiveData<FoodsResponse>()
     private val predictionResult:MutableLiveData<FoodsResponse> get() = _predictionResult
 
-    private fun uploadCapturedImageForPredicition(pictureToPredict: File){
+    fun uploadCapturedImageForPrediction(pictureToPredict: File){
         if (pictureToPredict!=null){
             val reducedFile= reduceFileImage(pictureToPredict as File)
 
@@ -48,4 +49,7 @@ class UploadImageViewModel:ViewModel() {
             })
         }
     }
+
+    fun setNewPredictionResult(): LiveData<FoodsResponse> = predictionResult
+
 }
