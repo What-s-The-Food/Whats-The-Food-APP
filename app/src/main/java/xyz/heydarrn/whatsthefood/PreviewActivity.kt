@@ -1,14 +1,14 @@
 package xyz.heydarrn.whatsthefood
 
+import android.content.Intent
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import xyz.heydarrn.whatsthefood.databinding.ActivityPreviewBinding
 import java.io.File
 
 class PreviewActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityPreviewBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,7 +18,7 @@ class PreviewActivity : AppCompatActivity() {
 
         //pemanggilan hasil foto
         val myFile = intent.getSerializableExtra("picture") as File
-        val isBackCamera = intent.getBooleanExtra("isBackCamera", true) as Boolean
+        val isBackCamera = intent.getBooleanExtra("isBackCamera", true)
 
         val result = rotateBitmap(
             BitmapFactory.decodeFile(myFile.path),
@@ -27,12 +27,14 @@ class PreviewActivity : AppCompatActivity() {
         binding.imgPreview.setImageBitmap(result)
 
         binding.btnSearch.setOnClickListener {
-            Toast.makeText(this, "Button ditekan", Toast.LENGTH_SHORT).show()
+            startActivity(
+                Intent(this,FoodPredictionResultActivity::class.java)
+                    .putExtra("photo", myFile)
+            )
         }
     }
 
     companion object {
         const val CAMERA_X_RESULT = 200
-
     }
 }

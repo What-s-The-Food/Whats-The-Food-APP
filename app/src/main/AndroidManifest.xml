@@ -4,7 +4,7 @@
     package="xyz.heydarrn.whatsthefood">
 
     <uses-permission android:name="android.permission.CAMERA" />
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsTheFood"
         tools:targetApi="31">
+        <activity
+            android:name=".FoodPredictionResultActivity"
+            android:exported="false" />
         <activity
             android:name=".PreviewActivity"
             android:exported="false" />
